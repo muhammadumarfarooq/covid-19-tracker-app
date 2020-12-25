@@ -1,15 +1,21 @@
 import './styles/card.css';
-import confirmedImg from '../assets/infected-img.png';
 
-const Card = () => {
-  
+const Card = (props) => {
+  const {
+    text,
+    number,
+    iconImg,
+    containerBackgroundColor,
+    textColor,
+    numberColor
+  } = props;
   return (
-    <div className="card">
+    <div style={{ backgroundColor: containerBackgroundColor }} className="card">
       <div className="card--text-box">
-        <p className="card--text">Confirmed Cases</p>
-        <p className="card--number">467,222</p>
+        <p style={{ color: textColor }} className="card--text">{text}</p>
+        <p style={{ color: numberColor }} className="card--number">{number}</p>
       </div>
-      <img className="card--img" src={confirmedImg} alt="card-img"/>
+      <img className="card--img" src={iconImg} alt="card-img"/>
     </div>
   );
 };
