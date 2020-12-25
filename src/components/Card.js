@@ -1,11 +1,16 @@
-import React from 'react';
+import './styles/card.css';
+import confirmedImg from '../assets/infected-img.png';
 
 const Card = () => {
   
   return (
-    <section className="">
-      <h1>Card</h1>
-    </section>
+    <div className="card">
+      <div className="card--text-box">
+        <p className="card--text">Confirmed Cases</p>
+        <p className="card--number">467,222</p>
+      </div>
+      <img className="card--img" src={confirmedImg} alt="card-img"/>
+    </div>
   );
 };
 
