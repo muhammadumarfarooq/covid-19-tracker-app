@@ -1,0 +1,19 @@
+.navbar {
+  width: 100%;
+  height: 7rem;
+  background: linear-gradient(135deg, rgb(80, 192, 85) 0%, rgb(84, 161, 0) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.navbar--text-box {
+  margin-right: 2rem;
+}
+
+.navbar--text {
+  color: #fff;
+  font-size: 2.6rem;
+  font-weight: bold;
+  text-align: right;
+}
