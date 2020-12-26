@@ -4,9 +4,8 @@ import './styles/country-select.css';
 import { useEffect, useState } from "react";
 import { fetchCountries } from "../api";
 
-const CountrySelect = () => {
+const CountrySelect = ({ selectedCountry, handleCountryChange }) => {
   const [countries, setCountries] = useState([]);
-  const [selectedCountry, setSelectedCountry] = useState("United States");
   useEffect(() => {
     const fetchAPI = async () => {
       setCountries(await fetchCountries());
@@ -18,7 +17,7 @@ const CountrySelect = () => {
   return (
     <Container className="country-select" maxWidth="md">
       <InputSelect isDisabled={!Boolean(countries.length)} value={selectedCountry} name="inputSelect"
-                   handleChange={(e) => setSelectedCountry(e.target.value)}
+                   handleChange={handleCountryChange}
                    id="input-select"
                    label="Select Country"
       >

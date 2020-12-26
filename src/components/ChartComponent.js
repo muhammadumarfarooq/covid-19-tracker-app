@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { Line, Bar } from 'react-chartjs-2';
 import { Container } from "@material-ui/core";
+import { fetchDailyData } from "../api";
 
-const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
+const ChartComponent = ({ data: { confirmed, recovered, deaths }, country }) => {
   const [dailyData, setDailyData] = useState({});
   
-  // useEffect(() => {
-  //   const fetchMyAPI = async () => {
-  //     const initialDailyData = await fetchDailyData();
-  //
-  //     setDailyData(initialDailyData);
-  //   };
-  //
-  //   fetchMyAPI();
-  // }, []);
+  useEffect(() => {
+    const fetchMyAPI = async () => {
+      const initialDailyData = await fetchDailyData();
+      
+      setDailyData(initialDailyData);
+    };
+    
+    fetchMyAPI();
+  }, []);
   
   const barChart = (
     confirmed ? (
@@ -72,4 +73,4 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
   );
 };
 
-export default Chart;
+export default ChartComponent;
