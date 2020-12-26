@@ -1,0 +1,47 @@
+
+.input-select {
+  width: 100%;
+}
+
+.input-select--text {
+  font-weight: 500;
+  font-size: 14px;
+  color: #b4b4b4;
+}
+
+label.MuiFormLabel-root.MuiInputLabel-formControl {
+  z-index: 1;
+  transform: translate(0, -2px) scale(0.92);
+}
+
+label.MuiFormLabel-root.MuiInputLabel-shrink {
+  transform: translate(0, -2px) scale(0.92);
+}
+
+.MuiInput-underline:before,
+.MuiInput-underline:after {
+  display: none;
+}
+
+.MuiInput-root .MuiSelect-select {
+  border-radius: 8px;
+  background-color: #F1F1F1;
+  height: 4rem;
+  padding-left: 16px;
+  font-weight: 500 !important;
+  font-size: 14px;
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: 0.018px;
+  border: 2px solid transparent;
+}
+
+.MuiSelect-select:focus {
+  border: 2px solid #000;
+  border-radius: 8px !important;
+}
+
+.input-select .MuiSelect-icon {
+  color: #000;
+  right: 11px;
+  top: 22px;
+}

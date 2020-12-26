@@ -3,7 +3,7 @@ import React from 'react';
 const Chart = () => {
   
   return (
-    <section className="">
+    <section className="chart">
     
     </section>
   );
