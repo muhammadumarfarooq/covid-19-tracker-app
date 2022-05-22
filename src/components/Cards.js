@@ -5,8 +5,9 @@ import recoveredImg from "../assets/recover-img.png";
 import deathsImg from "../assets/death-img.png";
 import { Grid } from "@material-ui/core";
 
-const Cards = ({ data: { confirmed = {}, recovered = {}, deaths = {} } }) => {
-  
+const Cards = ({ data }) => {
+    const { confirmed = {}, recovered = {}, deaths = {} } = data;
+
   return (
     <Grid className="cards" container spacing={3} justify="center">
       

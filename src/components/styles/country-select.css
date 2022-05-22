@@ -1,3 +1,9 @@
 .country-select {
-  margin-top: 5rem;
+  margin: 5rem 0;
+
+}
+
+.input-select .MuiSelect-select{
+  background-color: #fff;
+  border: 1px solid #000;
 }

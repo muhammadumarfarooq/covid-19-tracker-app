@@ -5,17 +5,17 @@ import { fetchDailyData } from "../api";
 
 const ChartComponent = ({ data: { confirmed, recovered, deaths }, country }) => {
   const [dailyData, setDailyData] = useState({});
-  
+
   useEffect(() => {
     const fetchMyAPI = async () => {
       const initialDailyData = await fetchDailyData();
-      
+
       setDailyData(initialDailyData);
     };
-    
+
     fetchMyAPI();
   }, []);
-  
+
   const barChart = (
     confirmed ? (
       <Bar
@@ -36,7 +36,7 @@ const ChartComponent = ({ data: { confirmed, recovered, deaths }, country }) => 
       />
     ) : null
   );
-  
+
   const lineChart = (
     dailyData[0] ? (
       <Line
@@ -65,10 +65,12 @@ const ChartComponent = ({ data: { confirmed, recovered, deaths }, country }) => 
       />
     ) : null
   );
-  
+
   return (
     <Container maxWidth="lg">
-      {country ? barChart : lineChart}
+        <div style={{maxWidth: '96rem', margin: 'auto'}}>
+          {country ? barChart : lineChart}
+        </div>
     </Container>
   );
 };

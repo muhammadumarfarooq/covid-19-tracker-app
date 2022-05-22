@@ -26,7 +26,6 @@ function App() {
   return (
     <div className="App">
       <Navbar/>
-      <h1>Covid 19 App</h1>
       <Cards data={data}/>
       <CountrySelect handleCountryChange={handleCountryChange} selectedCountry={country}/>
       <ChartComponent data={data} country={country}/>
